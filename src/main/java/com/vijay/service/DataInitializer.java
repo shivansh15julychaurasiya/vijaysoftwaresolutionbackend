@@ -19,8 +19,8 @@ public class DataInitializer implements CommandLineRunner {
 
     @Override
     public void run(String... args) {
-        String defaultUsername = "admin";
-        String defaultPassword = "admin123";
+        String defaultUsername = "vijay";
+        String defaultPassword = "vijay123";
         String defaultRole = "ROLE_ADMIN";
 
         // Check if admin user already exists
@@ -31,7 +31,7 @@ public class DataInitializer implements CommandLineRunner {
             admin.setRole(defaultRole);
 
             userRepository.save(admin);
-            System.out.println("✅ Default admin user created: username='admin', password='admin123'");
+            System.out.println("✅ Default admin user created:user="+defaultUsername+"Password="+defaultPassword);
         } else {
             System.out.println("ℹ️ Admin user already exists. Skipping creation.");
         }
